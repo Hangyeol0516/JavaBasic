@@ -1,1 +1,1 @@
-# School-Java
+# 자바 방과후
