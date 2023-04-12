@@ -1,0 +1,23 @@
+public class Main {
+
+	public static void main(String[] args) {
+
+	Scanner scan = new Scanner(System.in);
+	
+	int a = 18;
+	int b = 99;
+	int c;
+	
+	System.out.println("a는"+" "+a+"이고"+" "+"b는"+" "+b+"입니다.");
+	
+	System.out.println("값을 바꿉니다~~");
+	
+	c = a;
+	a = c;
+	a = b;
+	b = c;
+	
+	System.out.println("a는"+" "+a+"이고"+" "+"b는"+" "+b+"입니다.");
+	}
+
+}
