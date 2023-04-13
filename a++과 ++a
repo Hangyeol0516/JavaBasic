@@ -1,0 +1,14 @@
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int a = 18;
+		int A = ++a;
+		System.out.println("++a : "+ A);
+		
+		a = 18;
+		A = a++;
+		System.out.println("a++ : "+ A);
+		
+	}
+}
