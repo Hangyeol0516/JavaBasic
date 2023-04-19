@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("라면을 끓여보자!");
+		
+		System.out.println("가스레인지 앞에 섰다.");
+		
+		System.out.println("1.불을 킨다.");
+		System.out.println("2.귀찮다. 생라면 먹자.");
+		int a = scan.nextInt();
+		
+		if (a==1) {
+			System.out.println("가스버너가 켜집니다.");
+			System.out.println("물이 끓는다.");
+			
+			System.out.println("1. 면과 스프를 넣는다.");
+			System.out.println("2. 귀찮다.그냥 편의점 가자.");
+			int b = scan.nextInt();
+			
+			if (b==1) {
+				System.out.println("면과 스프를 넣고 2분 더 끓였다.");
+				System.out.println("라면을 먹었다.");
+			} else if (b==2) {
+				System.out.println("편의점에 갔다.");
+			} else {
+				System.out.println("올바른 선택지를 입력 하세요.");
+			}
+			
+		} else if (a==2) {
+			System.out.println("생라면을 먹었다.");
+		} else {
+			System.out.println("올바른 선택지를 입력 하세요.");
+		}
+		
+	}
+}
+
