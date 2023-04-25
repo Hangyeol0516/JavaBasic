@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("출력할 단 입력");
+		int a = scan.nextInt();
+		
+		System.out.println("몇 단까지 입력");
+		int b = scan.nextInt();
+		
+		int i = 1;
+    
+		while (i<=b) {
+			System.out.println(a+"*"+b+"="+a*b);
+			i++;
+		}
+		
+	}
+
+}
