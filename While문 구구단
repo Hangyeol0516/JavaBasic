@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("출력할 단 입력");
+		int a = scan.nextInt();
+		
+		int b = 1;
+		
+		while (b<=9) {
+			System.out.println(a+"*"+b+"="+a*b);
+			b++;
+		}
+		
+	}
+
+}
