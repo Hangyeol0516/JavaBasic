@@ -1,0 +1,21 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num = scan.nextInt();
+		int result = 0;
+		
+		for (int i=1;true; i++) {
+			result += i;
+			if (i == num) {
+				System.out.println(result);
+				break;
+			}
+		}
+		
+	}
+
+}
