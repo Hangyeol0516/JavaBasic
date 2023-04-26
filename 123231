@@ -1,0 +1,21 @@
+package main;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int num = scan.nextInt();
+		int result = 0;
+		
+		for (int i=1;i<=num; i++) {
+			if(i%2!=0 || i%3!=0) {
+				result = result + i;
+				System.out.println("현재 i:"+i);
+			}
+		}
+		System.out.println(result);
+	}
+
+}
