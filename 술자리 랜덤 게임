@@ -1,0 +1,36 @@
+package main;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		Random rd = new Random();
+		
+		int random = rd.nextInt(49)+1; // 1~50까지의 숫자 중 하나를 변수에 저장.
+		int result = 0;
+		
+		while (true) {
+			
+			System.out.println("맞쳐봐");
+			int a = scan.nextInt();
+			result++;
+			
+			if (random < a) {
+					System.out.println("다운");
+				} else if (random > a) {
+					System.out.println("업");
+				} else if (random == a) {
+					System.out.println("정답입니다.\n"+result+"번 입력하셨네요.");
+					break;
+				} else {
+					System.out.println("올바른 수를 입력하세요.");
+				}
+		}
+		
+	}
+	
+}
