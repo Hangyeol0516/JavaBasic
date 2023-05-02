@@ -1,0 +1,28 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+//		int[] a = new int[100];
+// 		int b[] = new int[100];
+		
+		int[] arr = new int[5];
+ 		int i = 0;
+		
+ 		Scanner scan = new Scanner(System.in);
+ 		
+ 		while (i<5) {
+ 			System.out.print("값을 입력하세요 : ");
+ 	 		arr[i] = scan.nextInt();
+ 	 		i++;
+		}
+ 		for (int j=0; j<5; j++) {
+ 			System.out.println(arr[j]);
+		}
+ 		
+	}
+	
+}
