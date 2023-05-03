@@ -1,0 +1,50 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+ 		Scanner scan = new Scanner(System.in);
+ 		
+ 		System.out.println("배열의 크기를 지정해주세요.");
+ 		int arrsize = scan.nextInt();
+ 		
+ 		int arr[] = new int[arrsize];
+ 		
+ 		for (int i=0;i<arrsize;i++) {
+			System.out.println("배열에 들어갈 수를 입력해주세요.");
+			arr[i] = scan.nextInt();
+		}
+ 		System.out.print("정렬 전:");
+ 		for (int i=0;i<arr.length;i++) {
+			System.out.print(" "+arr[i]);
+		}
+ 		System.out.println();
+ 		
+ 		int min;
+ 		int temp;
+ 		
+ 		for (int i=0;i<arr.length;i++) {
+ 			min = i;
+ 			for(int j=i+1;j<arr.length;j++) {
+ 				if (arr[min] > arr[j]) {
+ 					min = j;
+ 				}
+ 			} 
+ 			
+ 			temp = arr[i];
+ 			arr[i] = arr[min];
+ 			arr[min] = temp;
+ 		
+ 			System.out.print("정렬 후:");
+ 			for (int k=0;k<arr.length;k++) {
+ 				System.out.print(" "+arr[k]);
+ 			}
+ 			System.out.println();
+ 		}
+
+	}
+
+}
