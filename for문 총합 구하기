@@ -1,0 +1,29 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("start?:");
+		int 시작 = scan.nextInt();
+		
+		System.out.println("last?:");
+		int 마지막 = scan.nextInt();
+		
+		System.out.println("value change?:");
+		int 증가값 = scan.nextInt();
+		
+		int sum = 0;
+		
+		for (int i = 시작; i <= 마지막; i += 증가값) {
+			System.out.println("i: "+i);
+			sum += i;
+		}
+		System.out.println(sum);
+	}
+
+}
