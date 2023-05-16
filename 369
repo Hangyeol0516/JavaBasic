@@ -1,0 +1,29 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		int num = scan.nextInt();
+		int sum = 0;
+		
+		while (true) {
+			
+			if (num % 10 == 3 || num % 10 == 3 || num % 10 == 3) {
+				System.out.println(num+": 짝");
+				sum++;
+			}
+			num = num / 10;
+			if (num == 0) {
+				break;
+			}
+			
+		}
+		
+	}
+
+}
