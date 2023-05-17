@@ -1,0 +1,23 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("숫자를 입력해주세요.");
+		int n = scan.nextInt();
+		int result = 0;
+		
+		for (int i = 1; i <= n; i++) {
+			if(i % 2 == 0) {
+				result +=i;
+			}
+		}
+		System.out.println("1~"+n+"까지의 값은 "+result+"입니다.");
+	}
+
+}
