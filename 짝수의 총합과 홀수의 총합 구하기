@@ -1,0 +1,28 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int n = scan.nextInt();
+		
+		int evenSum = 0;
+		int oddSum = 0;
+		
+		for (int i = 1; i <= n; i++) {
+			if (i%2 == 0) {
+				evenSum += i;
+			}
+			if (i%2 != 0) {
+				oddSum += i;
+			}
+		}
+		System.out.println("짝수의 합 : " + evenSum);
+		System.out.println("홀수의 합 : " + oddSum);
+	}
+
+}
