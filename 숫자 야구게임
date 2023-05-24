@@ -1,4 +1,5 @@
 package main;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,33 +24,39 @@ public class Main {
 		//System.out.println(B);
 		//System.out.println(C);
 		
-		System.out.print("숫자 3개를 입력해주세요.");
-		int abc = scan.nextint();
+		int strike =0;
+		int ball =0;
+		int abc;
 		
-		if (abc > 999) {
-			System.out.println("다시 입력해주세요.");
-		} else {
-			int c = num % 10;
-			num = num / 10;
-			int b = num % 10;
-			num = num / 10;
-			int a = num % 10;
+		while(strike!=3) {
 			
+			System.out.print("숫자 3개를 입력해주세요.");
+			abc = scan.nextInt();
 			
-			int strike =0;
-			int ball =0;
-			
-			if (A==a) strike++;
-			if (B==b) strike++;
-			if (C==c) strike++;
-			
-			
+			if (abc > 999) {
+				System.out.println("다시 입력해주세요.");
+			} else {
+				int c = abc % 10;
+				abc = abc / 10;
+				int b = abc % 10;
+				abc = abc / 10;
+				int a = abc % 10;
+				
+				strike =0;
+				ball =0;
+				
+				if (A==a) strike++;
+				if (B==b) strike++;
+				if (C==c) strike++;
+				
+				if (a==B || a==C) ball++;
+				if (b==A || b==C) ball++;
+				if (c==A || c==B) ball++;
+				
+			}
+			System.out.println(strike + " strike " + ball + " ball");
 		}
-		
-		
-		
-		
-		
+		System.out.println("삼진 아웃입니다.");
 	}
 
 }
