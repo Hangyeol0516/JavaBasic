@@ -1,0 +1,65 @@
+package main;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		Random rd = new Random();
+		
+		int[] ABC = new int[3];
+		
+		for (int i=0 ; i<ABC.length ; i++) {
+			ABC[i] = rd.nextInt(9)+1;
+		}
+		
+		while (ABC[0] == ABC[1] || ABC[2]==ABC[0] || ABC[2] == ABC[1]) {
+			
+			for (int i=0 ; i<ABC.length ; i++) {
+				ABC[i] = rd.nextInt(9)+1;
+				
+			}
+		}
+		
+		int strike = 0;
+		int ball = 0;
+		
+		int[] abc = new int[3];
+		int num;
+			
+		while(strike!=3) {
+			System.out.print("숫자 3개를 입력해주세요.");
+			
+			num = scan.nextInt();
+			
+			if(num > 999) {
+				System.out.println("다시 입력해주세요.");
+			} else {
+				for (int i = abc.length-1 ; i>=0 ; i--) {
+					abc[i] = num % 10;
+					num = num / 10;					
+				}
+				
+				strike =0;
+				ball =0;
+				
+				if(ABC[0]==abc[0]) strike++;
+				if(ABC[1]==abc[1]) strike++;
+				if(ABC[2]==abc[2]) strike++;
+				
+				if(abc[0]==ABC[1] || abc[0]==ABC[2]) ball++;
+				if(abc[1]==ABC[0] || abc[1]==ABC[2]) ball++;
+				if(abc[2]==ABC[0] || abc[2]==ABC[1]) ball++;
+			}
+			System.out.println(strike + " strike " + ball + " ball");
+			if (strike == 3) {
+				System.out.println("삼진 아웃입니다.");
+			}
+		}					
+			
+	}
+
+}
