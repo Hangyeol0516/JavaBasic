@@ -1,0 +1,51 @@
+package _0614_;
+
+import java.util.Scanner;
+
+public class Calc {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("num1?");
+		int num1 = scan.nextInt();
+		
+		System.out.print("num2?");
+		int num2 = scan.nextInt();
+		
+		System.out.println("+(1) -(2) *(3) /(4)");
+		int op = scan.nextInt();
+		double result = 0;
+		
+		switch (op) {
+		case 1:
+			add(num1, num2);
+			break;
+			
+		case 2:
+			result = num1 - num2; 
+			break;
+			
+		case 3:
+			result = num1 * num2; 
+			break;
+			
+		case 4:
+			result = (double)num1 / num2; 
+			break;
+
+		default:
+			System.out.println("다시 입력해주세요.");
+		}
+		System.out.println("결과 : " + result);
+	}
+	
+	void add(int a, int b) {
+		result = num1 + num2;
+	}
+
+	
+	
+	
+}
