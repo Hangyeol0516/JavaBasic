@@ -1,0 +1,29 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+
+		System.out.print("가로 : ");
+		int 가로 = scan.nextInt();
+
+		System.out.print("세로 : ");
+		int 세로 = scan.nextInt();
+		
+		// 넓이 계산 메소드 호출
+		int 결과 = 넓이계산(가로, 세로);
+		
+		//return 된 값을 출력
+		System.out.print(가로+" * "+세로+" = "+결과);
+	}
+	
+	static int 넓이계산(int num1 ,int num2){
+		int result = num1 * num2;
+		return result;
+	}
+
+}
