@@ -1,0 +1,52 @@
+package main;
+
+public class Game {
+
+	public static void main(String[] args) {
+		
+//		Pokemon p1 = new Pokemon();
+//		p1.name = "한결몬";
+		
+		Pokemon p1 = new Pokemon("한결몬");
+		System.out.println(p1.pno + ":" + p1.name);
+		Pokemon p2 = new Pokemon();
+		System.out.println(p2.pno + ":" + p2.name);
+		Pokemon p3 = new Pokemon();
+		System.out.println(p3.pno + ":" + p3.name);
+		
+	}
+
+}
+
+
+package main;
+
+public class Pokemon {
+	
+	static int pno = 0;	
+	int level = 1;
+	int hp = 50;
+	int atk = 10;
+	String name;
+	
+	Pokemon() {
+		pno++;
+		name = "포켓몬" + pno;
+	}
+	
+	Pokemon(String name) {
+		pno++;
+		this.name = name;
+	}
+	
+	void 레벨업() {
+		level++;
+		hp+=10;
+		atk+=2;
+	}
+	
+	void 공격() {
+		System.out.println(name + "이 공격합니다.");
+	}
+	
+}
