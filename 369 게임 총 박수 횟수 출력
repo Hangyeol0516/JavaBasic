@@ -1,34 +1,22 @@
 package main;
 
-import java.util.Scanner;
-
 public class Main {
 
 	public static void main(String[] args) {
 
-		Scanner scan = new Scanner(System.in);
+		int result = 0;
 		
-		int num;
-		int sum = 0;
-		int count = scan.nextInt();
-		
-		for(int i = 1 ; i<=count ; i++) {
+		for (int i = 1; i <= 40; i++) {
 			
-			num = i;
+			if (i%10==3 || i%10==6 || i%10==9) {
+				result += 1;
+			}
 			
-			while (true) {
-				//System.out.println(num);
-				if (num % 10 == 3 || num % 10 == 6 || num % 10 == 9) {
-					System.out.println(num + ": 짝");
-					sum++;
-				}
-				num = num / 10;
-				if (num == 0) {
-					break;
-				}
+			if (i/10==3 || i/10==6 || i/10==9) {
+				result += 1;
 			}
 		}
-		System.out.println("1~"+count+"까지의 총 박수 : " + sum);	
+		System.out.println(result);
 	}
 
 }
